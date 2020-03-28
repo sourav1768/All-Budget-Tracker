@@ -33,6 +33,8 @@ var budgetController = (function() {
         data.allItems[type].forEach(function(cur) {
             sum += cur.value;
         });
+        if (sum >= 1000)
+            alert('Monthly limit exceeded');
         data.totals[type] = sum;
     };
     
